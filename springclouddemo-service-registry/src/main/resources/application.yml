@@ -1,0 +1,15 @@
+server:
+  port: 8888
+eureka:
+  instance:
+    hostname: eureka_1
+  client:
+    service-url: #指定服务注册中心地址,类型为 HashMap
+      defaultZone: http://127.0.0.1:8888/eureka/
+    fetch-registry: false #启动尝试拉取已经注册服务,目前自己是第一个，不拉取
+    register-with-eureka: true  #启动尝试向其他服务注册自己,到时候部署2台，所以true
+  server:
+    enable-self-preservation: false
+spring:
+  application:
+    name: service-registry
