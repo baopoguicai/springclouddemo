@@ -18,6 +18,7 @@
 
     <modules>
         <module>springclouddemo-service-registry</module>
+        <module>springclouddemo-config-server</module>
     </modules>
 
     <properties>

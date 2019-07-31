@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri:
-          password:
-          username:
+          uri: https://gitee.com/bpgc/springcloud-config-repo.git
+          password: 19935y4r
+          username: baopoguicai
           search-paths:
