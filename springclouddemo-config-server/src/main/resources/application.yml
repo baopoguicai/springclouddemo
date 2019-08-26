@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8811
 spring:
   application:
     name: config-server
@@ -20,22 +20,22 @@ spring:
     stream:
       kafka:
         binder:
-          # kafkaµÄÏûÏ¢ÖĞ¼ä¼ş·şÎñÆ÷
-          brokers: 127.0.0.1:2181 # ¹Ì¶¨
-          # zookeeperµÄ½Úµã£¬Èô¼¯Èº£¬ºóÃæ¼Ó£¬ºÅ¸ô¿ª
-          zk-nodes: 127.0.0.1:5181 #¹Ì¶¨
-          # ÈôÉèÖÃÎªfalse£¬¾Í²»»á×Ô¶¯´´½¨topic£¬ÓĞ¿ÉÄÜÄãTopic»¹Ã»´´½¨¾ÍÖ±½Óµ÷ÓÃ
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
           auto-create-topics: true
-
+      bindings:
+        #è¿™é‡Œç”¨streamç»™æˆ‘ä»¬æä¾›çš„é»˜è®¤outputï¼Œåé¢ä¼šè®²åˆ°è‡ªå®šä¹‰output
+        output:
+        # æ¶ˆæ¯å‘å¾€ç›®çš„åœ°
+          destination: stream-demo
+        #æ¶ˆæ¯å‘é€çš„æ ¼å¼ï¼Œæ¥æ”¶ç«¯ä¸ç”¨æŒ‡å®šæ ¼å¼ï¼Œä½†æ˜¯å‘é€ç«¯è¦
+          content-type: text/plain
 management:
   security:
-    enabled: false # ÈôÎªfalse£¬±©Â¶ËùÓĞ¶Ëµã
+    enabled: false
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8888/eureka/,http://127.0.0.1:8889/eureka/ #¹Ì¶¨
-  instance:
-    ip-address: 123.207.71.165 #ÅäÖÃÖĞĞÄ²¿Êğ»úÆ÷,¹«Íøip,¹Ì¶¨
-    prefer-ip-address: true #ÓÅÏÈÑ¡ÓÃip-address
+      defaultZone: http://127.0.0.1:8888/eureka/,http://127.0.0.1:8889/eureka/
 
 
