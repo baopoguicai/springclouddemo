@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -14,6 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
+@EnableCaching
 public class SpringclouddemoUserApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
@@ -43,7 +45,7 @@ public class SpringclouddemoUserApplication extends SpringBootServletInitializer
 	}
 
 	/**
-	 * 用于properties文件占位符解析
+	 * 用于properties文件占位符解析,要求springboot版本2.0以上
 	 * @return
 	 */
 	@Bean
