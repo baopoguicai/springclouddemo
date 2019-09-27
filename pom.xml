@@ -21,6 +21,7 @@
         <module>springclouddemo-config-server</module>
         <module>springclouddemo-user</module>
         <module>springclouddemo-trade</module>
+        <module>springclouddemo-stock</module>
     </modules>
 
     <properties>
