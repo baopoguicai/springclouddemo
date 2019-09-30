@@ -22,6 +22,7 @@
         <module>springclouddemo-user</module>
         <module>springclouddemo-trade</module>
         <module>springclouddemo-stock</module>
+        <module>springclouddemo-scheduler</module>
     </modules>
 
     <properties>
